@@ -1,0 +1,118 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int Balance=5000;
+
+		System.out.println("  ");
+		System.out.println("               ---WELCOME TO HAPPY BANK---  ");
+		System.out.println("  ");
+		System.out.println("  Enter your 4-digit security pin : ");
+
+		Scanner he = new Scanner(System.in);
+		int pin = he.nextInt();
+
+		if ((pin>=1000) && (pin<=9999))
+		
+		while(true)
+		{
+		{	System.out.println("  ");
+			System.out.println("  Your options are : ");
+			System.out.println("  ");
+			System.out.println("  1. Deposit");
+			System.out.println("  2. Withdraw");
+			System.out.println("  3. Check Balance");
+			System.out.println("  4. Exit");
+			System.out.println("  ");
+			System.out.println("  Enter your choice : ");
+
+			Scanner sc = new Scanner(System.in);
+			int choice = sc.nextInt();
+
+			if (choice==1)
+			{	System.out.println("  ");
+				System.out.println("  Enter amount : ");
+
+				Scanner de = new Scanner(System.in);
+				int amt1 = de.nextInt();
+
+				if (amt1>0)
+
+				{	Balance=amt1+Balance;
+
+					System.out.println("  ");
+					System.out.println("  Total balance is = "+"Rs. "+Balance+"/-");
+					System.out.println("  ");
+					System.out.println("--------------------------------");
+				}
+
+				else
+				{
+					System.out.println("  ");
+					System.out.println("  Transaction rejected because deposit amount is less than 0.");
+					System.out.println("  ");
+					System.out.println("--------------------------------");
+				}
+			}
+
+			else if (choice==2)
+			{	System.out.println("  ");
+				System.out.println("  Enter amount : ");
+
+				Scanner ge = new Scanner(System.in);
+				int amt2 = ge.nextInt();
+
+				if (amt2<=Balance)
+
+				{	Balance=Balance-amt2;
+
+					System.out.println("  ");
+					System.out.println("  Total balance is = "+"Rs. "+Balance+"/-");
+					System.out.println("  ");
+					System.out.println("--------------------------------");
+				}
+
+				else
+				{
+					System.out.println("  ");
+					System.out.println("  Transaction rejected because withdrawal amount is greater than the balance.");
+					System.out.println("  ");
+					System.out.println("--------------------------------");
+				}
+			}
+
+			else if (choice==3)
+			{
+				System.out.println("  ");
+				System.out.println("  Total balance is = "+"Rs. "+Balance+"/-");
+				System.out.println("  ");
+				System.out.println("--------------------------------");
+			}
+
+			else if (choice==4)
+			{
+				System.out.println("  ");
+				System.out.println("            ...Thank you for choosing our Bank...");
+				break;
+			}
+
+			else
+			{
+				System.out.println("  ");
+				System.out.println("  Incorrect choice.");
+				System.out.println("  ");
+				System.out.println("--------------------------------");
+			}
+		}
+		}
+
+		else
+		{
+			System.out.println("  ");
+			System.out.println("  Entered pin is incorrect.");
+			System.out.println("  Your transaction is stopped.");
+			System.out.println("  ");
+			System.out.println("            ...Thank you for choosing our Bank...");
+		}
+	}
+}
