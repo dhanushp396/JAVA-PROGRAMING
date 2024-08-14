@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int c=1;
+	    int d=1;
+	    int k=0;
+	    int m=0;
+	    Scanner sc=new Scanner(System.in);
+	    int num1 = sc.nextInt();
+	    int num2 = sc.nextInt();
+	    for (int i=1;i<=num1;i++)
+	    c=c*i;
+	    for (int h=1;h<=num2;h++)
+	    d=d*h;
+	    m=num1+num2;
+	    k=c+d;
+	    {
+	        System.out.println("Factorial of "+num1+" is "+c+".");
+	    }
+	    {
+	        System.out.println("Factorial of "+num2+" is "+d+".");
+	    }
+	    {
+	        System.out.println("There sum is "+m+".");
+	    }
+	    {
+	        System.out.println("The sum of there factorials is "+k+".");
+	    }
+	}
+}
