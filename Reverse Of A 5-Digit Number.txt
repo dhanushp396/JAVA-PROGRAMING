@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int num = sc.nextInt();
+	    int b=num%10;
+	    int c=b*10000;
+	    int d=(num/10)%10;
+	    int e=d*1000;
+	    int f=(num/100)%10;
+	    int g=f*100;
+	    int j=(num/1000)%10;
+	    int k=j*10;
+	    int h=num/10000;
+	    int i=c+e+g+k+h;
+	    {
+	        System.out.println(i);
+	    }
+	}
+}
