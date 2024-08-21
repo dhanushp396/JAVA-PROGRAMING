@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int b;
+	    
+	    System.out.println("Enter the value of A : ");
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int a = sc.nextInt();
+	    
+	    b=--a;
+	    
+	    System.out.println("The Decrement of A = "+b);
+	}
+}
